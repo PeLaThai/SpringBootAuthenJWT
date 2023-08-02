@@ -1,6 +1,6 @@
 package ra.controller;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ra.dto.Auth.LoginDTO;
@@ -11,7 +11,7 @@ import ra.service.Auth.AuthService;
 @RestController()
 @RequestMapping("/api/v1/auth")
 @CrossOrigin(origins = "*")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class AuthController {
     private final AuthService service;
 

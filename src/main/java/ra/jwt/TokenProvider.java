@@ -20,36 +20,6 @@ public class TokenProvider {
     private long JWT_EXPIRATION;
 
 
-//    public String generateToken(CustomUserDetails userDetails) {
-//        Date now = new Date();
-//        Date dateExpired = new Date(now.getTime() + this.JWT_EXPIRATION);
-//
-//        return Jwts.builder()
-//                .setSubject(userDetails.getUsername())
-//                .setIssuedAt(now)
-//                .setExpiration(dateExpired)
-//                .signWith(SignatureAlgorithm.HS256, this.JWT_SECRET)
-//                .compact();
-//    }
-
-
-//    public String extractUsername(String token) {
-//        return extractClaim(token, Claims::getSubject);
-//    }
-//
-//    public <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
-//        final Claims claims = extractAllClaims(token);
-//        return claimsResolver.apply(claims);
-//    }
-//
-//    private Claims extractAllClaims(String token) {
-//        return Jwts
-//                .parser()
-//                .setSigningKey(this.JWT_SECRET)
-//                .parseClaimsJws(token)
-//                .getBody();
-//    }
-
     public String generateToken(CustomUserDetails userDetails) {
         return generateToken(new HashMap<>(), userDetails);
     }

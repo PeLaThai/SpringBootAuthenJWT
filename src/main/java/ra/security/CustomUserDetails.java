@@ -17,8 +17,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@RequiredArgsConstructor
 public class CustomUserDetails implements UserDetails {
     private int userId;
     private String userName;

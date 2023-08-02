@@ -79,7 +79,7 @@ public class AuthService {
         }
         List<String> strRoles = signUpDTO.getListRoles();
         List<Roles> listRoles = new ArrayList<>();
-        if (strRoles == null) {
+        if (strRoles == null || strRoles.size() == 0) {
             Roles userRole = roleService.findByRoleName(ERole.ROLE_USER)
                     .orElseThrow(() -> new RuntimeException("Role is not found"));
             listRoles.add(userRole);

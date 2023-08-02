@@ -32,6 +32,11 @@ public class UserServiceImp implements UserService {
         return userRepo.save(user);
     }
 
+    @Override
+    public List<Users> searchUser(String keyword) {
+        return userRepo.searchUser(keyword);
+    }
+
     public List<Users> getAllUsers(){
         return userRepo.findAll();
     }
